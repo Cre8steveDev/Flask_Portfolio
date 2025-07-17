@@ -18,5 +18,10 @@ if app.secret_key is None:
     exit()
 
 
+@app.route("/health")
+def health():
+    return "Page is working", 200
+
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
